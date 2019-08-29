@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_graph_main.xml" app:startDestination="@id/folderListView">
+
+    <fragment android:id="@+id/folderListView" android:name="com.taz.bookmarkapp.folderlist.contract.FolderListView"
+              android:label="Folders">
+        <action android:id="@+id/action_folderListView_to_bookmarkListView" app:destination="@id/bookmarkListView"
+                app:exitAnim="@anim/slide_out_left"
+                app:enterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right"
+                app:popEnterAnim="@anim/slide_in_left"
+        />
+        <action android:id="@+id/action_folderListView_to_folderAddView" app:destination="@id/folderAddView"/>
+    </fragment>
+    <fragment android:id="@+id/bookmarkListView"
+              android:name="com.taz.bookmarkapp.bookmarklist.contract.BookmarkListView"
+              android:label="Bookmarks">
+        <action android:id="@+id/action_bookmarkListView_to_bookmarkAddView" app:destination="@+id/bookmarkAddView"/>
+    </fragment>
+    <fragment android:id="@+id/folderAddView" android:name="com.taz.bookmarkapp.folderadd.contract.FolderAddView"
+              android:label="Add Folder"/>
+    <fragment android:id="@+id/bookmarkAddView" android:name="com.taz.bookmarkapp.bookmarkadd.contract.BookmarkAddView"
+              android:label="BookmarkAddView"/>
+</navigation>

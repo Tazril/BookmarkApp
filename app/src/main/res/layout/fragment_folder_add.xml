@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:background="@color/grey"
+                android:layout_height="match_parent">
+
+
+    <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:padding="8dp"
+            android:background="@color/white"
+            android:imeOptions="actionDone"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"/>
+    <TextView
+            android:id="@+id/textViewInfo"
+            android:layout_width="match_parent"
+            android:layout_above= "@id/saveBtn"
+            android:layout_height="96dp"
+            android:background="@color/white"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:text="SAVE"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@color/grey" android:layout_height="match_parent"
+>
+    <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchViewBookmarkList"
+            android:imeOptions="actionDone"
+            android:background="@color/white"
+    />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewBookmarkListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/searchViewBookmarkList"
+            tools:listitem="@layout/item_rv_fragment_bookmark_list"/>
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+               android:scaleType="centerCrop"
+               android:src="@drawable/undraw_no_data_qbuo"
+               android:id="@+id/noDataImageNameIdRv"
+               android:visibility="visible"
+               tools:visibility="invisible"
+               android:layout_below="@id/searchViewBookmarkList"
+               android:contentDescription="@string/set_visible"/>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton android:layout_width="wrap_content"
+                                                                                   android:layout_height="wrap_content"
+                                                                                   android:id="@+id/fabBookmarkList"
+                                                                                   android:text="@string/add"
+                                                                                   app:icon="@drawable/ic_add"
+                                                                                   android:layout_alignParentBottom="true" android:layout_alignParentEnd="true"
+                                                                                   android:layout_margin="16dp"
+    />
+
+</RelativeLayout>

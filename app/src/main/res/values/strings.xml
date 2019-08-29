@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Url App</string>
+    <string name="refresh">Refresh</string>
+    <string name="set_visible">visible</string>
+    <string name="all_bookmarks">All Bookmarks</string>
+    <string name="add">add</string>
+</resources>
